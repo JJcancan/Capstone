@@ -10,9 +10,9 @@ Two months of aircraft position and speed data surrounding LAX was compiled. The
 Originally there were 19 features with two categorical and 17 numeric.
 ['hrstart', 'distapt', 'flightLevel', 'emitterCat', 'airGroundVector_groundSpeed', 'h3_id', 'temp', 'dwpt', 'rhum', 'wdir', 'wspd', 'pres', 'coco']
 
-- logTime: full timestamp of each row of data
-- startlat: latitude at entry of 200NM zone
-- startlon: longitude at entry of 200NM zone
+- logTime: Full timestamp of each row of data
+- startlat: Latitude at entry of 200NM zone
+- startlon: Longitude at entry of 200NM zone
 - hrstart: Hour of the timestamp generally traffic is time dependent and the time of day is most important
 - distapt: Distance to airport
 - flightLevel: The altitude in 100Ft 
