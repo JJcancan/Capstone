@@ -138,7 +138,8 @@ The results are shown below. XGBoost with the parameters shown were the best per
 Below shows each models best tuned test MSE and the baseline (no tuning) MSE against the linear regression baseline MSE.
 ![mse_comparison_grouped_final](https://github.com/user-attachments/assets/354c3849-87f1-42ed-a825-e62d51730c4a)
 
-The final model result is shown below against the other baseline MSE values. 
+The final model result is shown below against the other baseline MSE values. The model accomplished a lower MSE than the baseline which means the predicitve performance increased with the final model selected. 
+
 | Hard Calc MSE | Linear Regression Baseline MSE | Final Tuned XGBoost MSE |
 |---------------|-------------------------------|--------------------------|
 | 229.29946     | 4.74031                       | 3.852231                 |
