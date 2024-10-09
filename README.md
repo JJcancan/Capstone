@@ -4,7 +4,7 @@
 Question: Develop a regression model to accurately predict time of arrival 200 Nautical Miles away from the target airport location LAX. More accurate estimated time of arrivals can help with airport traffic and reduce delays.
 
 ## Data Understanding
-
+Ydata profiling was used to create a simple analysis of all the features. (Look at the data profiling report in the figures folder)
 Two months of aircraft position and speed data surrounding LAX was compiled. The time to land was calculated from actual landing information of each aircraft approaching LAX. Data at points of entry at or around the 200NM zone around LAX were used for this projects dataset.
 
 Originally there were 19 features with two categorical and 17 numeric.
@@ -32,6 +32,9 @@ Originally there were 19 features with two categorical and 17 numeric.
 - ttland: target variable is the actual time to land (not a feature)
 - calculated_time: calculated time to land this is a common back of the envelope calculation that uses ground speed and distance to airport (not a feature)
 
+Below shows the correlation matrix of the features.
+![Corr_Matrix](https://github.com/user-attachments/assets/8f3e8001-b254-4254-ad27-4f9d4cb14f52)
+
 Basic look at the data prcp is all zeroes and was dropped. Variables emitter category, aircraft type, and aircraft role that describe the aircraft characteristics were highly correlated. 
 
 Aircraft type had a high amount of variation and other aircraft characteristics could be boiled down to the feature called emitter category (EmitterCat). The EmitterCat provides an emitter category Id that describes the aircraft's size, weight, or performance characteristics.
@@ -46,7 +49,8 @@ The figure below shows the lat and longitude before h3 tiling
 ![starting_lat_lon](https://github.com/user-attachments/assets/3ae30f1d-f989-4e83-a5ff-e77896808ab2)
 
 The figure below shows lat and long converted/grouped to h3 tiles
-![LAXH3tiles](https://github.com/user-attachments/assets/2c595807-d5a0-4a22-aa91-c1a729283219)
+![LAXH3tiles](https://github.com/user-attachments/assets/d382f67d-4816-4345-97f7-4a8576cc7690)
+
 
 
 ## Data Preparation
@@ -74,6 +78,8 @@ Our dataset for modelling has 13 features with 20784 rows of data.
 - wspd
 - pres
 - coco
+
+Preprocessing was done using a one hot encoder on categorical columns (emitter category and h3_id) and the rest of the data was scaled used a standard scaler.
 
 ## Modeling
 A base linear regression model was used to get a baseline performance for MSE.
