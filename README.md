@@ -29,8 +29,8 @@ Originally there were 19 features with two categorical and 17 numeric.
 - prcp: precipitation
 - AC Type: Aircraft Model Type
 - AC Role: Aircraft Role (Commercial, Cargo, Etc)
-- ttland: target variable is the actual time to land (not a feature)
-- calculated_time: calculated time to land this is a common back of the envelope calculation that uses ground speed and distance to airport (not a feature)
+- ttland: target variable is the actual time to land (not a feature) in minutes
+- calculated_time: calculated time to land this is a common back of the envelope calculation that uses ground speed and distance to airport (not a feature) in minutes
 
 Below shows the correlation matrix of the features.
 ![Corr_Matrix](https://github.com/user-attachments/assets/8f3e8001-b254-4254-ad27-4f9d4cb14f52)
