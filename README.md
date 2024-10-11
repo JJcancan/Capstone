@@ -56,6 +56,8 @@ The figure below shows lat and long converted/grouped to h3 tiles
 ## Data Preparation
 Because emitter category is highly correlated with other aircraft characteristic features, the emitter category is used in place of those other features.
 
+Temp is highly correlated with Rhum and both features have no missing data, therefore Rhum was dropped.
+
 The datetime, starting latitude, starting longitudes were dropped as these features were only used to fetch weather data and convert positions to h3 tiles.
 
 Percipitation (prcp) was dropped as all values were 0. Missing values were then dropped from the dataset. 
@@ -64,7 +66,7 @@ The calculated time and the target variable time to land (ttland) were removed f
 
 A test train split was done splitting the data 20/80.
 
-Our dataset for modelling has 13 features with 20784 rows of data.
+Our dataset for modelling has 12 features with 20784 rows of data.
 - hrstart
 - distapt
 - flightLevel
@@ -73,7 +75,6 @@ Our dataset for modelling has 13 features with 20784 rows of data.
 - h3_id
 - temp
 - dwpt
-- rhum
 - wdir
 - wspd
 - pres
