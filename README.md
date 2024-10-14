@@ -1,4 +1,4 @@
-# Capstone
+# Aircraft Estimated Time of Arrival Prediction (LAX)
 
 ## Business Understanding
 Question: Develop a regression model to accurately predict time of arrival 200 Nautical Miles away from the target airport location LAX. More accurate estimated time of arrivals can help with airport traffic and reduce delays.
